@@ -1,4 +1,4 @@
-# Guía de Desarrollo para xesar13/CONCILIAIMSS
+# Guía de Desarrollo
 
 ## Executive Summary
 - Propósito: Sin descripción
