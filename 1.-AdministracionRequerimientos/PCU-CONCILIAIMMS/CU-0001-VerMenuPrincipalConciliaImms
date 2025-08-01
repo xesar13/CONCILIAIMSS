@@ -1,0 +1,89 @@
+Nombre del Caso de Uso: CU-0001-VerMenuPrincipalConciliaImms
+Paquete: ConciliaImms
+Liberacion: 1
+Prioridad: Esencial
+Tipo de Caso de Uso: Concreto          Complejidad: Medio.
+Versión: 20091103.1058
+_________________________________________________________________________________________________________
+Actores:
+                Principal: Operador Contabilidad / Mostrar el menu principal del modulo ConciliaIMSS
+                Secundarios: No Aplica. En El caso de Uso solo participa un actor el cual es el principal.
+
+Objetivo:       Que el sistema muestre el menu principal de ConciliaIMSS
+_________________________________________________________________________________________________________
+Precondiciones:
+                        1.- Que el operador Contabilidad haya seleccionado la opcion conciliacion de contabiliadad.exe
+
+Post-Condiciones:
+                        1.- Accesar a los diferentes modulos del menu Conciliacion
+_________________________________________________________________________________________________________
+Escenario Principal de Éxito o Flujo Básico
+
+1.- El flujo inicia cuando el Operador Contabilidad selecciona alguna de las opciones del Menu Principal de Conciliacion.
+    1.1.- Cargar Informacion
+        1.1.1.- Carga de automatico
+        1.1.2.- Cargar informacion IDSE mensual
+        1.1.3.- Cargar informacion SUA
+        1.1.4.- Cargar informacion IDSE bimestral
+
+   1.2.- Consulta de la Informacion
+        1.2.1.-  Informacion sin cargar
+        1.2.2.-  Consulta de registros confrontados
+        1.2.3.-  Consulta diferencias confronta
+        1.2.4.-  Confronta de informacion
+
+    1.3.- Confronta de informacion
+2.- El Operador Contabilidad selecciona alguna de las opciones
+        2.a.- El Operador Contabilidad selecciona 1.1.1.- Carga de automatico
+        2.b.- El Operador Contabilidad selecciona 1.1.2.- Cargar informacion IDSE mensual
+        2.c.- El Operador Contabilidad selecciona 1.1.3.- Cargar informacion SUA
+        2.d.- El Operador Contabilidad selecciona 1.1.4.- Cargar informacion IDSE bimestral
+        2.e.- El Operador Contabilidad selecciona 1.2.1.- Informacion sin cargar
+        2.f.- El Operador Contabilidad selecciona 1.2.2.- Consulta de registros confrontados
+        2.g.- El Operador Contabilidad selecciona 1.2.3.- Consulta diferencias confronta
+        2.h.- El Operador Contabilidad selecciona 1.2.4.-  Confronta de informacion
+3.- El flujo termina.
+_________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
+Consideraciones Especiales o Flujo Alternativo
+
+        2.a.- El Operador Contabilidad selecciona 1.1.1.- Carga de automatico
+                2.a.1.- El flujo continua en el CU-0001-CargarInformacionAutomatica del modulo CONCILIAIMSS02
+        2.b.- El Operador Contabilidad selecciona 1.1.2.- Cargar informacion IDSE mensual
+                2.b.1.- El flujo continua en el CU-0001-CargarInformacionIDSEmensual del modulo CONCILIAIMMS01
+        2.c.- El Operador Contabilidad selecciona 1.1.3.- Cargar informacion SUA
+                2.c.1.- El flujo continua en el CU-0001-CargarInformacionSUA del modulo CONCILIAIMMSS03
+        2.d.- El Operador Contabilidad selecciona 1.1.4.- Cargar informacion IDSE bimestral
+                2.d.1.- El flujo continua en el CU-0001-CargarInformacionIDSEbimestral del modulo CONCILIAIMSS01
+        2.e.- El Operador Contabilidad selecciona 1.2.1.- Informacion sin cargar
+                2.e.1.- El flujo continua en el CU-0001-ConsultarInformacionCargada del modulo CONCILIAIMMSS04
+        2.f.- El Operador Contabilidad selecciona 1.2.2.- Consulta de registros confrontados
+                2.f.1.- El flujo continua en el CU-0002-ConsultarConfronteInformacion del modulo CONCILIAIMSS04
+        2.g.- El Operador Contabilidad selecciona 1.2.3.- Consulta diferencias confronta
+                2.g.1.- El flujo continua en el CU-0001-ConsultarDiferenciasConfronta del modulo CONCILIAIMSS05
+        2.h.- El Operador Contabilidad selecciona 1.2.4.- Confronta de informacion
+                2.h.1.- El flujo continua en el CU-0001-ConfrontarInformacionIDSE-SUA del modulo CONCILIAIMSS06
+
+
+ * El Operador ELP puede cancelar el proceso en cualquier momento presionando la tecla <Esc>.
+
+_________________________________________________________________________________________________________
+ Requerimientos no Funcionales Especiales:
+ Interfaz de Usuario: 0001-VerMenuPrincipalConciliaImms
+
+Asociaciones:
+
+         Asociaciones de Extensión:     CU-0001-CargarInformacionAutomatica del modulo CONCILIAIMSS02
+                                        CU-0001-CargarInformacionIDSEmensual del modulo CONCILIAIMMS01
+                                        CU-0001-CargarInformacionSUA del modulo CONCILIAIMMSS03
+                                        CU-0001-CargarInformacionIDSEbimestral del modulo CONCILIAIMSS01
+                                        CU-0001-ConsultarInformacionCargada del modulo CONCILIAIMMSS04
+                                        CU-0002-ConsultarConfronteInformacion del modulo CONCILIAIMSS04
+                                        CU-0001-ConsultarDiferenciasConfronta del modulo CONCILIAIMSS05
+                                        CU-0001-ConfrontarInformacionIDSE-SUA del modulo CONCILIAIMSS06
+         Asociaciones de Inclusión:     No aplica. Por que no hay caso de uso del que se incluya a este.
+         Caso de Uso donde se Incluye:  No aplica. Por que no hay caso de uso del que se incluya a este.
+         Caso de Uso al que Extiende:   No aplica. Por que no hay caso de uso que extienda a este.
+
+         Caso de Uso de Generalización: No aplica. No es un caso de uso padre.
+
